@@ -4,42 +4,59 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#111111" />
-  <meta name="description" content="Envix Interactive — Application Test Page" />
-  <title>Apply — Envix Interactive</title>
+  <meta name="description" content="Thank you for applying to Envix Interactive!" />
+  <title>Thank You — Envix Interactive</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body { margin:0; font-family: ui-sans-serif, system-ui; background: #111; color: #f5f5f5; display:flex; justify-content:center; align-items:center; height:100vh; }
-    form { display:flex; flex-direction:column; gap:12px; background: rgba(255,255,255,0.05); padding:24px; border-radius:14px; }
-    input, textarea, select, button { padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color:#f5f5f5; }
-    button { cursor:pointer; background: linear-gradient(135deg,#fff,#aaa); color:black; font-weight:700; }
-    button:hover { opacity:0.9; }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background: linear-gradient(180deg, #111111, #1a1a1a);
+      color: #f5f5f5;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 800;
+      background: linear-gradient(90deg, #ffffff, #aaaaaa);
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #c0c0c0;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ffffff, #aaaaaa);
+      color: black;
+      transition: transform 220ms cubic-bezier(.2,.8,.2,1), box-shadow 220ms cubic-bezier(.2,.8,.2,1);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+    }
   </style>
 </head>
 <body>
-
-<form action="https://formsubmit.co/ryanroser12@gmail.com" method="POST">
-  <!-- hidden inputs for Formsubmit -->
-  <input type="hidden" name="_captcha" value="0">
-  <input type="hidden" name="_next" value="https://envixinteractive.github.io/envix-site/thankyou.html">
-
-  <input type="text" name="name" placeholder="Full Name" required>
-  <input type="text" name="roblox-username" placeholder="Roblox Username" required>
-  <input type="email" name="email" placeholder="Email Address" required>
-  <select name="role" required>
-    <option value="">Select Role</option>
-    <option value="Scripter / Programmer">Scripter / Programmer</option>
-    <option value="UI/UX Developer">UI/UX Developer</option>
-    <option value="3D Modeler">3D Modeler</option>
-    <option value="Animator">Animator</option>
-    <option value="Map / Level Designer">Map / Level Designer</option>
-    <option value="Graphic Designer / Visual Artist">Graphic Designer / Visual Artist</option>
-    <option value="Environmental Artist">Environmental Artist</option>
-    <option value="Community Manager">Community Manager</option>
-    <option value="Server Moderation">Server Moderation</option>
-    <option value="Game Tester / QA">Game Tester / QA</option>
-  </select>
-  <textarea name="experience" placeholder="Tell us about your experience" rows="4" required></textarea>
-  <button type="submit">Submit Application</button>
-</form>
-
+  <div>
+    <h1>Thank You!</h1>
+    <p>Your application has been successfully submitted to <strong>Envix Interactive</strong>. We’ll review it and get back to you shortly.</p>
+    <a href="index.html" class="btn">Return to Home</a>
+  </div>
 </body>
 </html>

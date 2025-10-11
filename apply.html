@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#111111" />
+  <meta name="description" content="Envix Interactive — Application Test Page" />
+  <title>Apply — Envix Interactive</title>
+  <style>
+    body { margin:0; font-family: ui-sans-serif, system-ui; background: #111; color: #f5f5f5; display:flex; justify-content:center; align-items:center; height:100vh; }
+    form { display:flex; flex-direction:column; gap:12px; background: rgba(255,255,255,0.05); padding:24px; border-radius:14px; }
+    input, textarea, select, button { padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color:#f5f5f5; }
+    button { cursor:pointer; background: linear-gradient(135deg,#fff,#aaa); color:black; font-weight:700; }
+    button:hover { opacity:0.9; }
+  </style>
+</head>
+<body>
+
+<form action="https://formsubmit.co/ryanroser12@gmail.com" method="POST">
+  <!-- hidden inputs for Formsubmit -->
+  <input type="hidden" name="_captcha" value="0">
+  <input type="hidden" name="_next" value="https://envixinteractive.neocities.org/thankyou">
+
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="text" name="roblox-username" placeholder="Roblox Username" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <select name="role" required>
+    <option value="">Select Role</option>
+    <option value="Scripter / Programmer">Scripter / Programmer</option>
+    <option value="UI/UX Developer">UI/UX Developer</option>
+    <option value="3D Modeler">3D Modeler</option>
+    <option value="Animator">Animator</option>
+    <option value="Map / Level Designer">Map / Level Designer</option>
+    <option value="Graphic Designer / Visual Artist">Graphic Designer / Visual Artist</option>
+    <option value="Environmental Artist">Environmental Artist</option>
+    <option value="Community Manager">Community Manager</option>
+    <option value="Server Moderation">Server Moderation</option>
+    <option value="Game Tester / QA">Game Tester / QA</option>
+  </select>
+  <textarea name="experience" placeholder="Tell us about your experience" rows="4" required></textarea>
+  <button type="submit">Submit Application</button>
+</form>
+
+</body>
+</html>

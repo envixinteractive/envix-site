@@ -6,7 +6,6 @@
   <meta name="theme-color" content="#111111" />
   <meta name="description" content="Envix Interactive — Application Page. Join our Roblox development studio!" />
   <title>Apply — Envix Interactive</title>
-  <link rel="stylesheet" href="style.css">
   <style>
     :root {
       --bg-950: #111111;
@@ -15,8 +14,8 @@
       --text-300: #c0c0c0;
       --accent-start: #ffffff;
       --accent-end: #aaaaaa;
-      --radius-lg: 14px;
       --radius-xl: 18px;
+      --radius-lg: 14px;
       --container: 1200px;
       --transition-fast: 220ms cubic-bezier(.2,.8,.2,1);
     }
@@ -25,7 +24,10 @@
     body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial; color: var(--text-100); background: linear-gradient(180deg, var(--bg-950), var(--bg-900)); line-height:1.6; }
     .container { width:100%; max-width: var(--container); margin:0 auto; padding:0 20px; }
 
-    h1 { font-size:clamp(32px,5vw,60px); font-weight:800; margin-bottom:10px; background: linear-gradient(90deg, var(--accent-start), var(--accent-end)); -webkit-background-clip: text; color:transparent; }
+    h1 { font-size:clamp(32px,5vw,60px); font-weight:800; margin-bottom:10px; 
+         background: linear-gradient(90deg, var(--accent-start), var(--accent-end)); 
+         background-clip: text; -webkit-background-clip: text; color:transparent; }
+
     p { color: var(--text-300); margin-bottom:24px; }
 
     form { display:flex; flex-direction:column; gap:16px; background: rgba(255,255,255,0.03); padding:28px; border-radius: var(--radius-xl); }
@@ -49,18 +51,18 @@
     <p>Fill out the application below to apply for Envix Interactive. Be honest and detailed!</p>
 
     <form id="applicationForm" action="https://formsubmit.co/ryanroser12@gmail.com" method="POST">
-      <!-- Formsubmit hidden fields -->
-      <input type="hidden" name="_next" value="thankyou.html">
+      <!-- Formsubmit hidden inputs -->
+      <input type="hidden" name="_next" value="https://envixinteractive.github.io/envix-site/thankyou.html">
       <input type="hidden" name="_captcha" value="0">
 
-      <!-- Step 1 -->
+      <!-- Step 1: Personal Info -->
       <div class="step active">
         <input type="text" name="name" placeholder="Full Name" required />
-        <input type="text" name="roblox-username" placeholder="Roblox Username" required />
+        <input type="text" name="roblox_username" placeholder="Roblox Username" required />
         <input type="email" name="email" placeholder="Email Address" required />
       </div>
 
-      <!-- Step 2 -->
+      <!-- Step 2: Role & Experience -->
       <div class="step">
         <select name="role" required>
           <option value="">Select Role</option>
@@ -78,12 +80,13 @@
         <textarea name="experience" placeholder="Tell us about your experience" rows="5" required></textarea>
       </div>
 
-      <!-- Step 3 -->
+      <!-- Step 3: Portfolio -->
       <div class="step">
         <textarea name="portfolio" placeholder="Link to your portfolio or previous work" rows="3"></textarea>
         <p>Ready to submit your application!</p>
       </div>
 
+      <!-- Navigation -->
       <div class="navigation">
         <button type="button" id="prevBtn" style="display:none;">Previous</button>
         <button type="button" id="nextBtn">Next</button>
@@ -95,8 +98,10 @@
   <footer>© <span id="y"></span> Envix Interactive</footer>
 
   <script>
+    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
 
+    // Multi-step form logic
     const steps = document.querySelectorAll('.step');
     const nextBtn = document.getElementById('nextBtn');
     const prevBtn = document.getElementById('prevBtn');
